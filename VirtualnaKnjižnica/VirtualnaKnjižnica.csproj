@@ -187,9 +187,15 @@
     <Compile Include="Migrations\201709241405337_InicijalnaMigracijaModela.Designer.cs">
       <DependentUpon>201709241405337_InicijalnaMigracijaModela.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709241554280_TablicaAutor.cs" />
+    <Compile Include="Migrations\201709241554280_TablicaAutor.Designer.cs">
+      <DependentUpon>201709241554280_TablicaAutor.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
-    <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ApplicationDbContext.cs" />
+    <Compile Include="Models\ApplicationUser.cs" />
+    <Compile Include="Models\Autor.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -264,6 +270,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201709241405337_InicijalnaMigracijaModela.resx">
       <DependentUpon>201709241405337_InicijalnaMigracijaModela.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709241554280_TablicaAutor.resx">
+      <DependentUpon>201709241554280_TablicaAutor.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
