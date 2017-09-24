@@ -1,0 +1,28 @@
+﻿@model VirtualnaKnjižnica.ViewModels.AutorViewModel
+@{
+    ViewBag.Title = "Dodaj autora";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Add a Gig</h2>
+
+@using (Html.BeginForm("DodajAutora", "Autor"))
+{
+    @Html.AntiForgeryToken()
+    <div class:"form-group">
+        @Html.LabelFor(m => m.Ime)
+        @Html.TextBoxFor(m => m.Ime, new { @class = "form-control", placeholder = "Ime Autora" })
+        @Html.ValidationMessageFor(m => m.Ime)
+    </div>
+    <div class:"form-group">
+        @Html.LabelFor(m => m.Prezime)
+        @Html.TextBoxFor(m => m.Prezime, new { @class = "form-control", placeholder = "Prezime AUtora" })
+        @Html.ValidationMessageFor(m => m.Prezime)
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+@section scripts
+{
+    @Scripts.Render("~/bundles/jqueryval")
+}
